@@ -10,7 +10,7 @@ namespace Mikeys_Mummy.Controllers
     {
 
         //Here all the actions of the Views will be created
-        public IActionResult Index()
+        public IActionResult Dashboard()
         {
             return View();
         }

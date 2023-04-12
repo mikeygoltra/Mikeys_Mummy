@@ -70,6 +70,7 @@ namespace Mikeys_Mummy
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapDefaultControllerRoute();
                 endpoints.MapRazorPages();
             });
         }
