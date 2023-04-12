@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Mikeys_Mummy.Model;
+using Mikeys_Mummy.Data;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace Mikeys_Mummy.Migrations
