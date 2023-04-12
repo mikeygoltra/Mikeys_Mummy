@@ -7,6 +7,13 @@ namespace Mikeys_Mummy.ViewModels
 {
     public class PageInfo
     {
-        //Here the Page numbering info will be calculated and assigned
+        //get the total number of burials you need to show
+        public int TotalNumBurials { get; set; }
+        //decide how many burials you will show per page
+        public int BurialsPerPage { get; set; }
+        public int CurrentPage { get; set; }
+
+        //figure out how many pages you need
+        public int TotalPages => (int)Math.Ceiling((double)TotalNumBurials / BurialsPerPage);
     }
 }

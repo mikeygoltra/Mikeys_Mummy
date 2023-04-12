@@ -40,6 +40,8 @@ namespace Mikeys_Mummy
             services.AddDbContext<intex2dbContext>(options => options.UseNpgsql(Configuration.GetConnectionString("AuthConnectionString")));
             services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<AuthDbContext>();
 
+            services.AddScoped<IMummyRepository, EFMummyRepository>();
+
             services.ConfigureApplicationCookie(config =>
             {
                 config.LoginPath = "/Login";

@@ -93,10 +93,24 @@
             </div>
         </nav>
     </header>
-    <div class="container">
+@*    <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
+    </div>*@
+    <div class="row m-1 p-1">
+
+        <div id="types" class="col-3">
+            @*this class will be 3 col wide*@
+            <vc:sex></vc:sex>
+        </div>
+
+        <div class="col-9">
+            <div>
+                @RenderBody()
+            </div>
+        </div>
+
     </div>
 
     <footer class="border-top footer text-muted">
