@@ -7,5 +7,6 @@ namespace Mikeys_Mummy.ViewModels
 {
     public class PageInfo
     {
+        //Here the Page numbering info will be calculated and assigned
     }
 }

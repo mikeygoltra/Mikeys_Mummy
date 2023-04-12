@@ -7,5 +7,6 @@ namespace Mikeys_Mummy.Infrastructure
 {
     public class PaginationTagHelper
     {
+        //Here the tag helpers for pagination will be created
     }
 }
