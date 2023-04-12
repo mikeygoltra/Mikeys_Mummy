@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 #nullable disable
 
-namespace Mikeys_Mummy.Model
+namespace Mikeys_Mummy.Data
 {
     public partial class intex2dbContext : DbContext
     {
