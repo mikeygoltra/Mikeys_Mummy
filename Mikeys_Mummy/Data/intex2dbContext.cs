@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Mikeys_Mummy.Model;
@@ -53,6 +54,7 @@ namespace Mikeys_Mummy.Data
         public virtual DbSet<TextilefunctionTextile> TextilefunctionTextiles { get; set; }
         public virtual DbSet<Yarnmanipulation> Yarnmanipulations { get; set; }
         public virtual DbSet<YarnmanipulationTextile> YarnmanipulationTextiles { get; set; }
+        public IQueryable<Burialmain> BurialMain { get; internal set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
