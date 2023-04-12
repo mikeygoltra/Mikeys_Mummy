@@ -37,6 +37,7 @@ namespace Mikeys_Mummy
             });
             services.AddRazorPages();
             services.AddDbContext<AuthDbContext>(options => options.UseNpgsql(Configuration.GetConnectionString("AuthConnectionString")));
+            services.AddDbContext<intex2dbContext>(options => options.UseNpgsql(Configuration.GetConnectionString("AuthConnectionString")));
             services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<AuthDbContext>();
 
             services.ConfigureApplicationCookie(config =>
@@ -70,6 +71,8 @@ namespace Mikeys_Mummy
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapDefaultControllerRoute();
+
                 endpoints.MapRazorPages();
             });
         }
