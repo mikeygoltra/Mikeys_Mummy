@@ -18,10 +18,16 @@ namespace Mikeys_Mummy.Controllers
             return View();
         }
 
+        
         public IActionResult Unsupervised()
         {
             return View();
         }
-         
+
+        public IActionResult Supervised()
+        {
+            return View();
+        }
+
     }
 }
