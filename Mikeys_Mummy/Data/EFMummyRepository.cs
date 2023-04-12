@@ -13,7 +13,7 @@ namespace Mikeys_Mummy.Data
         {
             context = temp;
         }
-        public IQueryable<Burialmain> BurialMain => context.BurialMain;
+        public IQueryable<Burialmain> Burialmain => context.BurialMain;
 
 
     }

@@ -8,6 +8,6 @@ namespace Mikeys_Mummy.Data
 {
     public interface IMummyRepository
     {
-        IQueryable<Burialmain> BurialMain { get; }
+        IQueryable<Burialmain> Burialmain { get; }
     }
 }

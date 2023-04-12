@@ -2,6 +2,7 @@
 using Mikeys_Mummy.Data;
 using Mikeys_Mummy.ViewModels;
 using Mikeys_Mummy.Model;
+using Mikeys_Mummy.Model.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,7 +25,7 @@ namespace Mikeys_Mummy.Controllers
             //we have two models we are using so if we need to pass data to both, do it here
             var passInfo = new MummyViewModel
             {
-                BurialMain = repo.BurialMain
+                Burialmain = repo.Burialmain
                 .Where(b => b.Sex == bodySex || bodySex == null)
                 .OrderBy(b => b.Area)
                 .Skip((pageNum - 1) * pageSize)
@@ -35,8 +36,8 @@ namespace Mikeys_Mummy.Controllers
                 {
                     TotalNumBurials =
                         (bodySex == null ?
-                            repo.BurialMain.Count()
-                            : repo.BurialMain.Where(x => x.Sex == bodySex).Count()),
+                            repo.Burialmain.Count()
+                            : repo.Burialmain.Where(x => x.Sex == bodySex).Count()),
                     BurialsPerPage = pageSize,
                     CurrentPage = pageNum
                 }
@@ -48,7 +49,7 @@ namespace Mikeys_Mummy.Controllers
         public IActionResult InfoPage(int burid)
         {
 
-            Burialmain burialmain = repo.BurialMain.FirstOrDefault(a => a.Id == burid);
+            Burialmain burialmain = repo.Burialmain.FirstOrDefault(a => a.Id == burid);
             if (burialmain == null)
             {
                 return NotFound();

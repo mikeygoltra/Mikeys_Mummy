@@ -20,7 +20,7 @@ namespace Mikeys_Mummy.Components
         {
             ViewBag.SelectedSex = RouteData?.Values["bodySex"];
 
-            var sex = repo.BurialMain
+            var sex = repo.Burialmain
                 .Select(x => x.Sex)
                 .Distinct()
                 .OrderBy(x => x);
@@ -42,7 +42,7 @@ namespace Mikeys_Mummy.Components
         {
             ViewBag.SelectedHeaDir = RouteData?.Values["bodyHeadDir"];
 
-            var head = repo.BurialMain
+            var head = repo.Burialmain
                 .Select(x => x.Headdirection)
                 .Distinct()
                 .OrderBy(x => x);
