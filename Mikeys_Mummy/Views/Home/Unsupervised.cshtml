@@ -1,0 +1,13 @@
+﻿@using Microsoft.AspNetCore.Hosting
+@inject IWebHostEnvironment HostingEnvironment
+@{
+    ViewData["Title"] = "Burial groupings";
+
+    string htmlFilePath = "C:/Users/Josh/source/repos/unsuptesting/wwwroot/figure.html"; // Replace with the path to your HTML file
+    string htmlContent = System.IO.File.ReadAllText(htmlFilePath);
+
+}
+
+<div>
+    @Html.Raw(htmlContent)
+</div>
