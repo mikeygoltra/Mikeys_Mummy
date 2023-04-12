@@ -57,10 +57,16 @@ namespace Mikeys_Mummy.Controllers
             return View(burialmain);
         }
 
+        
         public IActionResult Unsupervised()
         {
             return View();
         }
-         
+
+        public IActionResult Supervised()
+        {
+            return View();
+        }
+
     }
 }
